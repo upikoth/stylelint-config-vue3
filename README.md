@@ -41,8 +41,8 @@ module.exports = eslintConfig
 + Добавить в настройки валидацию этим расширением
 ```json
 {
-	"editor.formatOnSave": true,
-	"stylelint.validate": ["scss", "vue"],
+  "editor.formatOnSave": true,
+  "stylelint.validate": ["scss", "vue"],
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
   },
