@@ -22,3 +22,30 @@ export UPIKOTH_PACKAGES_READ=значение переменной в zsh.rc.
 ```sh
 npm install @upikoth/stylelint-config-vue3
 ```
+
+После установки библиотеки:
++ добавить файл .eslintrc.cjs
+```
+const eslintConfig = require('@upikoth/eslint-config-vue3')
+
+module.exports = eslintConfig
+```
++ добавить файл .eslintignore
++ добавить скрипт в package.json
+```
+"lint:js": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts"
+```
+
+Дополнительные настройки для vscode:
++ В рекомендуемы расширения проекта добавить "stylelint.vscode-stylelint"
++ Добавить в настройки валидацию этим расширением
+```json
+{
+	"editor.formatOnSave": true,
+	"stylelint.validate": ["scss", "vue"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+  },
+  "editor.foldingStrategy": "indentation",
+}
+```
